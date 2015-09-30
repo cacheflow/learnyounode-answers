@@ -17,12 +17,9 @@ function fetch(url)
         })
 
         response.on('end', function() {
-            // console.log(allData.length);
             console.log(allData);
             if(count < 2) {
                 count++
-                // console.log("Urls %s", urls)
-                // console.log("Next url: %s", urls[count])
                 fetch(urls[count]);
             }
         })
